@@ -1,6 +1,6 @@
 import { createElement, useState } from 'react';
 
-import Greeting from '../components/Greeting';
+import Greeting from './components/Greeting';
 
 type ImageProps = {
   src: string;
