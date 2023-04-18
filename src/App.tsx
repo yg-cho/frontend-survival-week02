@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import React from 'react';
+import { createElement, useState } from 'react';
 
 import Greeting from './components/Greeting';
 
@@ -30,12 +31,12 @@ export default function App() {
         {' '}
         {count}
       </p>
-      {[1, 2, 3, 4, 5].map((i) => (
-        <button key={i} type="button" onClick={() => handleClick(i)}>
-          +
-          {i}
-        </button>
-      ))}
+      {[1, 2, 3, 4, 5].map((i) => React.createElement("button", {
+          key: i,
+          type: "button",
+          onClick: () => handleClick(i)
+        }, "+", i))
+      }
     </div>
   );
 }
