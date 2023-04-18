@@ -1,12 +1,13 @@
+import { createElement } from 'react';
+
 export default function Greeting({ name }: {
   name: string;
 }) {
   return (
-    <p>
-      Hello,
-      {' '}
-      {name}
-      !
-    </p>
+    createElement(
+      'p',
+      null,
+      `Hello, ${name}!`,
+    )
   );
 }
